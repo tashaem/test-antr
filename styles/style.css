@@ -1,0 +1,269 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', 'Helvetica', Arial, sans-serif;
+    font-weight: 300;
+}
+
+
+p {
+    line-height:1.7em;
+}
+
+.bold700 {
+    font-weight:700;
+}
+
+.red {
+    color:#EF4033;
+}
+
+.darkpurple {
+    color:#2d2479;
+}
+
+.purple {
+    color:#504992;
+}
+
+.lblue {
+    color:#33BAEF;
+}
+
+.navbar {
+    transition: 0.5s all ease;
+    height:6em;
+    padding:0.5% 3%;
+}
+
+.navbar.shrink {
+    padding:0 5%;
+    height:4em;
+}
+
+.nav-colored {
+    background-color:#2d2479;
+}
+
+.nav-transparent {
+    background-color:transparent;
+}
+
+.navbar-brand > img {
+    width: 4em;
+    height:4em;
+}
+
+.navbar-brand {
+    display:flex;
+    align-items:center;
+    /* border:1px dotted pink; */
+    
+    
+    transition: 0.3s all ease;
+    opacity:1   
+}
+
+.navbar-brand.hide {
+    opacity:0;
+}
+
+.navbar-brand > div {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    /* border:1px dotted cyan; */
+}
+
+.navbar-brand .eng {
+    font-size:1em;
+    /* border:2px solid green; */
+}
+.navbar-brand .ch {
+    font-size:0.8em;
+    font-weight:200;
+    margin-top:1em;
+    margin-bottom:0;
+    /* border:2px solid purple; */
+}
+
+
+.imgcarrier {
+    display:inline-block;
+
+}
+
+.col.center {
+    text-align:center;
+}
+
+.imgcarrier > img {
+    width:90%;
+    border-radius:4em;
+    box-shadow:0em 0.5em 1em black;
+}
+
+.container {
+    padding:0;
+    margin:0;
+    width:100vw;
+}
+
+.row {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height:100vh;
+    padding: 4%;
+}
+
+.row.even {
+    background-image: linear-gradient(#2d2479,#504992);
+    color:white;
+}
+
+.row.odd {
+    background-color:#F3F3F3;
+}
+
+.row.landing {
+    background-repeat: no-repeat;
+    background: linear-gradient( rgba(0, 0, 0, 1.5), rgba(0, 0, 0, 0.5) ),url("../images/antrodia_wiki.jpg");
+
+    background-position: left 10%;
+    background-size: cover;
+
+}
+
+.row.landing > .col {
+    transform:translateY(5vh);
+}
+
+
+hr {
+    border-top:0.1em solid #EF4033;
+    margin: 2em 0em;
+    width:10%;
+}
+
+.landing p {
+    font-size:1em;
+    width:80%;
+}
+
+.btn {
+    margin-top: 4%;
+    border-radius:10em;
+    padding:0.5em 2em;
+    background-color:#2d2479;
+    transition:0.3s ease-in;
+}
+
+.btn:hover {
+    background-color: #F3F3F3;
+    color: #504992;
+}
+
+h1, h2, h3 {
+    font-family:'Nunito', 'Roboto', Arial, sans-serif;
+    font-weight:700;
+}
+
+h1 {
+    width:95%;
+    font-weight:700;
+    font-size:2em;
+    margin-bottom:1em;
+    letter-spacing:0.01em;
+
+    animation-name:h1-out;
+    animation-duration:0.5s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+h1:hover {
+    animation-name:h1-in;
+    animation-duration:0.5s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes h1-in {
+    from {
+        letter-spacing:0.01em;
+    }
+    to {
+        letter-spacing:0.04em;
+    }
+}
+
+@keyframes h1-out {
+    from {
+        letter-spacing:0.04em;
+    }
+    to {
+        letter-spacing:0.01em;
+    }
+}
+
+
+h2 {
+    font-size:1.8em;
+    margin-bottom:1em;
+}
+
+h3 {
+    font-size:1.3em;
+}
+
+#facebook, #whatsapp {
+    margin-top:5%;
+    margin-right:3%;
+    width:3em;
+    -webkit-filter: invert(1);
+}
+
+.phoneview {
+    display:none;
+}
+
+
+/* Phone specific requirements */
+@media only screen and (max-width: 768px) {
+
+    .row.landing .col-12 {
+        text-align:center;
+        align-content:center;
+    }
+
+    hr {
+        display:none;
+    }
+
+    .d-sm-none {
+        display:none;
+    }
+    
+    .navbar-brand {
+        width:60%;
+        padding:1em 0;
+    }
+
+    #navbar-brand-text {
+        font-size:0.7em;
+    }
+
+    #products-title {
+        top:5%;
+    }
+
+    .nav-colored {
+        background-color:transparent;
+    }
+    
+}
